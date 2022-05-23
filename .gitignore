@@ -1,4 +1,6 @@
-.venv/
-.ipnb_checkpoints/
+./.venv/
+./.ipnb_checkpoints/
 
 praw.ini
+
+./.idea
