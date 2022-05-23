@@ -1,0 +1,4 @@
+.venv/
+.ipnb_checkpoints/
+
+praw.ini
