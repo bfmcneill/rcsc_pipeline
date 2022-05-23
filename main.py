@@ -62,15 +62,14 @@ def process_submission(s):
     )
 
 
-def destroy_db():
+def destroy_db(db_path):
     """Destroy local storage
 
     Returns:
         None
     """
     logger.debug("destroying db.json")
-    dbjson_path = pathlib.Path.cwd() / "db.json"
-    dbjson_path.unlink(missing_ok=True)
+    db_path.unlink(missing_ok=True)
 
 
 def init_db(db_path='db.json'):
@@ -106,8 +105,9 @@ def entrypoint(subreddit_name):
         None
     """
     # local storage actions
-    destroy_db()
-    comments_tb, submissions_tb = init_db()
+    db_path = pathlib.Path(__file__).parent / f'db.json'
+    destroy_db(db_path)
+    comments_tb, submissions_tb = init_db(db_path)
 
     reddit = authenticate_reddit_client()
 
