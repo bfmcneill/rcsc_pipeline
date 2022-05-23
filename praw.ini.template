@@ -1,0 +1,9 @@
+[bot1]
+bot_name='bot1'
+bot_version=0.0.1
+bot_author=redditusername
+client_id=appclientid
+client_secret=appsecret
+password=reddituserpassword
+username=redditusername
+user_agent=script:%(bot_name)s:v%(bot_version)s (by u/%(bot_author)s)

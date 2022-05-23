@@ -1,6 +1,8 @@
-./.venv/
-./.ipnb_checkpoints/
-
-praw.ini
-
 ./.idea
+/.venv/
+/.idea/
+/.ipynb_checkpoints/
+
+
+/db.json
+/praw.ini
